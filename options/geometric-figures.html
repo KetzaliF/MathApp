@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-theme = "dark">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../assets/favicon.svg" type="image/x-icon">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="../styles/global.css">
+   <link rel="stylesheet" href="../styles/vars.css">
+   <link rel="stylesheet" href="../styles/geometric-figures.css">
+   <title>Geometric Figures | Curso Práctico de JavaScript</title>
+</head>
+<body>
+   <header>
+      <div class="logo">
+         <img src="../assets/favicon.svg" class="logo__img">
+         <p class="logo__name">MathApp</p>
+      </div>
+      <nav class="menu">
+         <ul class="menu__options">
+            <li>
+               <a href="" class="menu__options-link active-link">Geometric Figures</a>
+            </li>
+            <li>
+               <a href="" class="menu__options-link">Percentages & Discounts</a>
+            </li>
+            <li>
+               <a href="" class="menu__options-link">Averages</a>
+            </li>
+            <li>
+               <a href="" class="menu__options-link">Salary Analysis</a>
+            </li>
+            <li>
+               <a href="" class="menu__options-link">Vacations Bonus</a>
+            </li>
+         </ul>
+
+         <div class="theme">
+            <div class="theme__sun">
+               <img src="../assets/light-mood.png" alt="sun icon" class="icon-theme">
+            </div>
+            <div class="theme__moon">
+               <img src="../assets/dark-mood.png" alt="moon icon" class="icon-theme">
+            </div>
+         </div>
+      </nav>
+   </header>
+
+   <main>
+      <div class="information-container">
+         <div class="title">
+            <h1 class="title__text">Geometric Figures</h1>
+            <img src="../assets/figures.png" alt="geometric figures" class="title__img">
+         </div>
+         <p class="description">
+            This is the first workshop of the JavaScript practical course, where the perimeter and area of some geometric figures are obtained.
+         </p>
+      </div>
+
+      <div class="geometric-figures">
+         <div class="square container">
+            <div class="geometric-figures__title">
+               <i class="bi bi-square geometric-figures__img"></i>
+               <p class="geometric-figures__name">Square</p>
+            </div>
+            <form>
+               <label class="geometric-figures__info" for="inputSquare">What is the measure of the side of your square?</label>
+               <input class="input" id="inputSquare" type="number" autocomplete="off">
+               <div class="geometric-figures__btn">
+                  <button class="btn" type="button" role="button" onclick="calculateSquarePerimeter()">Get Perimeter</button>
+                  <button class="btn" type="button" role="button" onclick="calculateSquareArea()">Get Area</button>
+               </div>
+               <input type="text" placeholder="Answer" class="input" id="answerSquare" disabled>
+            </form>
+         </div>
+         
+         <div class="circle container">
+            <div class="geometric-figures__title">
+               <i class="bi bi-circle geometric-figures__img"></i>
+               <p class="geometric-figures__name">Circle</p>
+            </div>
+            <form>
+               <label class="geometric-figures__info" for="inputCircle">What is the measure of the radius of your circle?</label>
+               <input class="input" id="inputCircle" type="number" autocomplete="off">
+               <div class="geometric-figures__btn">
+                  <button class="btn" type="button" role="button" onclick="calculateCirclePerimeter()">Get Perimeter</button>
+                  <button class="btn" type="button" role="button" onclick="calculateCircleArea()">Get Area</button>
+               </div>
+               <input type="text" placeholder="Answer" class="input" id="answerCircle" disabled>
+            </form>
+         </div>
+
+         <div class="triangle container">
+            <div class="geometric-figures__title">
+               <i class="bi bi-triangle geometric-figures__img"></i>
+               <p class="geometric-figures__name">Triangle</p>
+            </div>
+            <form>
+               <p class="geometric-figures__info">What is the measure of the side of your triangle?</p>
+               <div class="container-input margin">
+                  <label for="inputSideA">Side A</label>
+                  <input class="input" id="inputSideA" type="number" autocomplete="off">
+               </div>
+               <div class="container-input margin">
+                  <label for="inputSideB">Side B</label>
+                  <input class="input" id="inputSideB" type="number" autocomplete="off">
+               </div>
+               <div class="container-input margin">
+                  <label for="inputBase">Base</label>
+                  <input class="input" id="inputBase" type="number" autocomplete="off">
+               </div>
+               <div class="container-input">
+                  <label for="inputHeight">Height</label>
+                  <input class="input" id="inputHeight" type="number" autocomplete="off">
+               </div>
+               <div class="geometric-figures__btn">
+                  <button class="btn" type="button" role="button" onclick="calculateTrianglePerimeter()">Get Perimeter</button>
+                  <button class="btn" type="button" role="button" onclick="calculateTriangleArea()">Get Area</button>
+               </div>
+               <input type="text" placeholder="Answer" class="input" id="answerTriangle" disabled>
+            </form>
+         </div>
+
+         <div class="rectangle container">
+            <div class="geometric-figures__title">
+               <i class="bi bi-rectangle geometric-figures__img"></i>
+               <p class="geometric-figures__name">Rectangle</p>
+            </div>
+            <form>
+               <p class="geometric-figures__info" for="inputCircle">What is the measure of the side of your rectangle?</p>
+               <div class="container-input margin">
+                  <label>Base</label>
+                  <input class="input inputBase" type="number" autocomplete="off">
+               </div>
+               <div class="container-input">
+                  <label>Height</label>
+                  <input class="input inputHeight" type="number" autocomplete="off">
+               </div>
+               <div class="geometric-figures__btn">
+                  <button class="btn" type="button" role="button" onclick="calculateRectanglePerimeter()">Get Perimeter</button>
+                  <button class="btn" type="button" role="button" onclick="calculateRectangleArea()">Get Area</button>
+               </div>
+               <input type="text" placeholder="Answer" class="input" id="answerRectangle" disabled>
+            </form>
+         </div>
+
+      </div>
+   </main>
+
+   <footer>
+      <p class="credits">
+         Designed and Coded by 
+         <a href="https://github.com/ketzaliF" class="credits__link">Ketzali Flores</a>
+      </p>
+   </footer>
+
+   <script src="../scripts/theme.js"></script>
+   <script src="../scripts/geometric-figures.js"></script>
+</body>
+</html>

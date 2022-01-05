@@ -1,0 +1,75 @@
+.information-container {
+   margin: 80px auto 100px auto;
+}
+
+.geometric-figures {
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, 450px);
+   gap: 100px 180px;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.geometric-figures__title {
+   display: flex;
+   align-items: center;
+   margin-bottom: 32px;
+   justify-content: center;
+}
+
+.geometric-figures__img{
+   color: var(--font-color);
+   font-size: var(--md);
+   margin-right: 30px;
+}
+
+.geometric-figures__name {
+   font-size: var(--md);
+   color: var(--font-color);
+   font-weight: 700;
+}
+
+form {
+   width: 100%;
+   display: grid;
+   place-items: center;
+}
+
+.geometric-figures__info {
+   font-size: var(--sm);
+   color: var(--font-color);
+   font-weight: 400;
+   margin-bottom: 24px;
+   text-align: center;
+}
+
+.geometric-figures__btn {
+   width: 100%;
+   margin: 32px 0 24px 0;
+   display: flex;
+   justify-content: space-between;
+}
+
+.btn {
+   width: 120px;
+   padding: 6px 0;
+}
+
+.container-input {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.container-input label{
+   color: var(--font-color);
+   font-size: var(--sm);
+   font-weight: 400;
+   margin-right: 10px;
+}
+
+.margin {
+   margin-bottom: 24px;
+}

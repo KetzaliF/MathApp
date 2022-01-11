@@ -1,0 +1,59 @@
+.information-container {
+   margin: 80px auto 100px auto;
+}
+
+.container {
+   margin: 0 auto;
+}
+
+.container__name {
+   font-size: var(--md);
+   color: var(--font-color);
+   font-weight: 700;
+   margin-bottom: 32px;
+}
+
+.container-input {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.container-input label,
+.container-input p{
+   color: var(--font-color);
+   font-size: var(--sm);
+   font-weight: 400;
+   margin-right: 10px;
+}
+
+.margin {
+   margin-bottom: 24px;
+}
+
+.container__btn {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+.btn {
+   padding: 6px 21px;
+   margin: 32px 0 24px 0;
+}
+
+.select-options {
+   outline: 0;
+   border: 0;
+   height: 30px;
+   font-size: var(--xsm);
+   cursor: pointer;
+   position: relative;
+}
+
+option {
+   background: var(--bg-color);
+   cursor: pointer;
+   text-align: left;
+}

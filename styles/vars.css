@@ -1,4 +1,4 @@
-[data-theme = "dark"] {
+body.dark {
    --bg-color: rgb(26, 26, 26);
    --font-color: rgb(237, 237, 237);
    --blue: rgb(26, 183, 234);
@@ -20,7 +20,7 @@
    inset 1px 1px 3px rgba(17, 17, 17, 0.9);
 }
 
-[data-theme = "light"] {
+body.light {
    --bg-color: rgb(237, 237, 237);
    --font-color: rgb(26, 26, 26);
    --blue: rgb(26, 183, 234);

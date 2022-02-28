@@ -74,6 +74,7 @@ header {
 
 .active-link {
    pointer-events: none;
+   cursor: not-allowed;
 }
 
 .btn,

@@ -58,4 +58,4 @@ This is a math page that was carried out in Platzi's practical JavaScript course
 ## Deployment
 You can visit de project with this link:
 
-*https://ketzalif.github.io/MathApp/
+* https://ketzalif.github.io/MathApp/

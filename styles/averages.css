@@ -56,3 +56,10 @@
    align-items: center;
    justify-content: center;
 }
+
+@media all and (max-width: 576px) {
+   .container__btn{
+      width: 90%;
+      justify-content: center;
+   }
+}

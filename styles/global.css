@@ -16,9 +16,21 @@ header {
    width: 100%;
    padding: 20px 30px;
    box-shadow: var(--shadow-menu);
+}
+
+.header__container{
+   width: 100%;
+   max-width: 1400px;
+   margin: 0 auto;
    display: flex;
    align-items: center;
    justify-content: space-between;
+}
+
+main {
+   width: 100%;
+   max-width: 1400px;
+   margin: 0 auto;
 }
 
 .logo {
@@ -77,6 +89,44 @@ header {
    cursor: not-allowed;
 }
 
+.menu__options.show{
+   top: 74px;
+   right: 0;
+}
+
+.hamburger {
+   background-color: transparent;
+   height:20px;
+	width:25px;
+	transform:translate3d(0, 0, 0);
+   transition:transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+   cursor: pointer;
+   display: none;
+   margin-left: 30px;
+   z-index: 1000;
+}
+
+.hamburger__line {
+   background: var(--font-color);
+	margin-bottom: 4px;
+	border-radius:2px;
+	width: 25PX;
+	height: 4px;
+	opacity:1;
+	transform:translate3d(0, 0, 0);
+	transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+}
+
+.hamburger.show .-top{
+	transform:translateY(200%) rotate(45deg);
+}
+.hamburger.show .-mid{
+	opacity:0;
+}
+.hamburger.show .-bottom{
+	transform:translateY(-200%) rotate(134deg);
+}
+
 .btn,
 .options__link {
    display: inline-block;
@@ -115,8 +165,10 @@ input[type=number]::-webkit-outer-spin-button {
    border-radius: 25px;
    box-shadow: var(--neumorphism-container);
    padding: 24px 47px;
+   margin: 0 auto;
    width: 100%;
    max-width: 450px;
+   justify-self: center;
 }
 
 .input {
@@ -136,7 +188,7 @@ input[type=number]::-webkit-outer-spin-button {
 .information-container {
    width: 90%;
    max-width: 1400px;
-   margin: 0 auto;
+   margin: 80px auto 100px auto;
 }
 
 .title {
@@ -155,6 +207,7 @@ input[type=number]::-webkit-outer-spin-button {
    margin-left: 30px;
    width: 70px;
    height: 70px;
+   display: block;
 }
 
 .description {
@@ -186,4 +239,73 @@ footer {
 .icon-theme {
    height: 30px;
    width: 30px;
+}
+
+@media all and (max-width: 576px) {
+   .information-container {
+      margin-top: 80px;
+   }
+
+   .description {
+      font-size: 1.2rem;
+   }
+
+   footer {
+      padding-bottom: 15px;
+   }
+
+   .title__img {
+      display: none;
+   }
+
+   .container {
+      width: 90%;
+      padding: 24px 18px;
+   }
+}
+
+@media all and (max-width: 1100px) {
+   .title__text {
+      font-size: 45px;
+      text-align: center;
+   }
+
+   .hamburger {
+      display: inline;
+   }
+
+   .menu__options {
+      position: fixed;
+      width: 100%;
+      height: calc(100vh - 74px);
+      background: var(--bg-color);
+      top: 74px;
+      right: -100vw;
+      text-align: center;
+      transition: all 1s;
+      flex-direction: column;
+      justify-content: space-evenly;
+      z-index: 300;
+   }
+
+   .menu__options li {
+      margin-right: 0;
+   }
+
+   .menu__options-link {
+      width: 220px;
+      padding: 8px 0;
+      font-size: var(--sm);
+      display: inline-block;
+      position: relative;
+      border: 1px solid transparent;
+      background-clip: padding-box, border-box;
+      background-origin: padding-box, border-box;
+      background-image: linear-gradient(45deg, var(--bg-color), var(--bg-color)), var(--gradient);
+      border-radius: 8px;
+   }
+
+   .menu__options-link:hover::after {
+      width: 0;
+   }
 }

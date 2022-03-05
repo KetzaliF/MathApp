@@ -232,13 +232,18 @@ footer {
 
 /*Theme*/
 .theme {
-   position: relative;
+   border: none;
+   background-color: transparent;
    cursor: pointer;
 }
 
 .icon-theme {
    height: 30px;
    width: 30px;
+}
+
+.theme__moon{
+   display: none;
 }
 
 @media all and (max-width: 576px) {
